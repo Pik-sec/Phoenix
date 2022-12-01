@@ -47,7 +47,9 @@ Phoenix.exe -u http://www.test.com -t 25 -c 输入cookie -mc 200
 
 -o 输出扫描日
 
--x 不想显示状态码 2xx/3xx/4xx/5xx/xxx 只能选择其中一个
+-x  不想显示单个的状态码 404，302，500 ...
+
+    不想显示状态码 2xx/3xx/4xx/5xx/xxx 只能选择其中一个
 
 ```
 
