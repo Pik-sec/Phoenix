@@ -70,7 +70,7 @@ Phoenix.exe -u http://www.test.com -t 25 -c 输入cookie -mc 200
 
 目录增加格式 首字符去掉斜杆 如 1.php 不要写成 /1.php
 
-## 12月1日 更新
+## 12月7日 更新
 
 加入代理，增加爬虫敏感度
 
