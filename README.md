@@ -47,9 +47,11 @@ Phoenix.exe -u http://www.test.com -t 25 -c 输入cookie -mc 200
 
 -o 输出扫描日
 
--x  不想显示单个的状态码 404，302，500 ...
+-x  不想显示单个的状态码 404，302，500 ... (只能选一个)
 
     不想显示状态码 2xx/3xx/4xx/5xx/xxx 只能选择其中一个
+
+-p 代理,如 http://username:password@ip:port, http://ip:port
 
 ```
 
@@ -68,4 +70,10 @@ Phoenix.exe -u http://www.test.com -t 25 -c 输入cookie -mc 200
 
 目录增加格式 首字符去掉斜杆 如 1.php 不要写成 /1.php
 
+## 12月1日 更新
+
+加入代理，增加爬虫敏感度
+
 [![Stargazers over time](https://starchart.cc/Pik-sec/Phoenix.svg)](https://starchart.cc/Pik-sec/Phoenix)
+
+
