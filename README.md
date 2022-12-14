@@ -5,7 +5,7 @@
 
 新一代目录扫描神器
 
-Phoenix-不死鸟，探测速度不亚于dirsearch,先会去重处理，现在开始往字典加字典不用再考虑是否会重复，不死鸟将会帮你去重，不用考虑字典加的格式，无论是/a.php还是a.php,不死鸟将帮你格式字典，接口敏感度提升,-x 可以用,分开，不在单一排除
+Phoenix-不死鸟，探测速度不亚于dirsearch,先会去重处理，现在开始往字典加字典不用再考虑是否会重复，不死鸟将会帮你去重，不用考虑字典加的格式，无论是/a.php还是a.php,不死鸟将帮你格式字典，接口敏感度提升,-xc 可以用,分开，不在单一排除
 
 # 使用说明
 
@@ -14,15 +14,15 @@ Phoenix-不死鸟，探测速度不亚于dirsearch,先会去重处理，现在�
 ```
 不想显示404，403 以及4xx任何状态码
 
-Phoenix.exe -u http://www.test.com -t 25 -x 4xx
+Phoenix.exe -u http://www.test.com -t 25 -xc 4xx
 
 只是不想显示404 
 
-Phoenix.exe -u http://www.test.com -t 25 -x 404,403,401
+Phoenix.exe -u http://www.test.com -t 25 -xc 404,403,401
 
 上面这个可以等于下面这个
 
-Phoenix.exe -u http://www.test.com -t 25 -x 4xx 
+Phoenix.exe -u http://www.test.com -t 25 -xc 4xx 
 
 加入cookie 匹配状态码200
 
@@ -47,11 +47,13 @@ Phoenix.exe -u http://www.test.com -t 25 -c 输入cookie -mc 200
 
 -o 输出扫描日
 
--x  不想显示单个的状态码 404，302，500 ... (可以同时选择，分开)
+-xc  不想显示单个的状态码 404，302，500 ... (可以同时选择，分开)
 
     不想显示状态码 2xx/3xx/4xx/5xx/xxx (可以同时选择，分开)
     
     xxx为大于600的状态码
+    
+-xs 不显示 指定的 size （解决重定向问题）
 
 -p 代理,如 http://username:password@ip:port, http://ip:port
 
@@ -59,7 +61,7 @@ Phoenix.exe -u http://www.test.com -t 25 -c 输入cookie -mc 200
 
 ## 11月22日 更新
 
-支持 -x 2xx/3xx/4xx/5xx/xxx
+支持 -xc 2xx/3xx/4xx/5xx/xxx
 
 ## 11月28日 更新
 
@@ -78,7 +80,11 @@ Phoenix.exe -u http://www.test.com -t 25 -c 输入cookie -mc 200
 
 ## 12月12日 更新
 
-更新 -x 可以选择多个 , 分开 ,去重改进，不需要再注意加入字典的格式，第一个字符有无/都能加入
+更新 -xc 可以选择多个 , 分开 ,去重改进，不需要再注意加入字典的格式，第一个字符有无/都能加入
+
+## 12月14日 更新
+
+更新 -x 变成 -xc ，增加 -xs 不显示 指定的 size 
 
 [![Stargazers over time](https://starchart.cc/Pik-sec/Phoenix.svg)](https://starchart.cc/Pik-sec/Phoenix)
 
